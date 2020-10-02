@@ -1,0 +1,14 @@
+/* All custom css  */
+
+.nav-btn {
+  width: 30%;
+}
+
+.nav-para {
+  width: 100%;
+}
+
+.active {
+  background-color: white !important;
+  color: #333 !important;
+}
