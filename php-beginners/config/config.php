@@ -12,6 +12,10 @@
   $cardTitle = 'Card A';
   $pageTitle = 'A New Page Title From Config';
 
+  // True and false marks for PHP Render
+  $trueMark = '<span>&#10003;</span>';
+  $falseMark = '<span>&#10060;</span>';
+
   // Associative Array Data With List
   $associativeArray = [
     'October 5' => 'Monday',

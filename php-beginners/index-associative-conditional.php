@@ -42,48 +42,59 @@
                     <th scope="col">Brown</th>
                     <th scope="col">Black</th>
                     <th scope="col">Red</th>
+                    <th scope="col">Grey</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
+                    <!-- Name ref with php -->
                     <td><?php echo keyRef($hairColor, 0) ?></td>
-                    <td><span>&#10060;</span></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10060;</span></td>
+                    <td><?php if ($hairColor['Bob'] === 'Blonde') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Bob'] === 'Brown') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Bob'] === 'Black') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Bob'] === 'Red') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Bob'] === 'Grey') { echo $trueMark;} else {echo $falseMark;} ?></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
+                    <!-- Name ref with php -->
                     <td><?php echo keyRef($hairColor, 1) ?></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10060;</span></td>
+                    <td><?php if ($hairColor['Harry'] === 'Blonde') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Harry'] === 'Brown') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Harry'] === 'Black') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Harry'] === 'Red') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Harry'] === 'Grey') { echo $trueMark;} else {echo $falseMark;} ?></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
+                    <!-- Name ref with php -->
                     <td><?php echo keyRef($hairColor, 2) ?></td>
-                    <td><span>&#10060;</span></td>
-                    <td><span>&#10060;</span></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10060;</span></td>
+                    <td><?php if ($hairColor['Joe'] === 'Blonde') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Joe'] === 'Brown') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Joe'] === 'Black') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Joe'] === 'Red') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Joe'] === 'Grey') { echo $trueMark;} else {echo $falseMark;} ?></td>
                   </tr>
                   <tr>
                     <th scope="row">4</th>
+                    <!-- Name ref with php -->
                     <td><?php echo keyRef($hairColor, 3) ?></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10060;</span></td>
-                    <td><span>&#10003;</span></td>
+                    <td><?php if ($hairColor['Sarah'] === 'Blonde') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Sarah'] === 'Brown') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Sarah'] === 'Black') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Sarah'] === 'Red') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Sarah'] === 'Grey') { echo $trueMark;} else {echo $falseMark;} ?></td>
                   </tr>
                   <tr>
                     <th scope="row">5</th>
+                    <!-- Name ref with php -->
                     <td><?php echo keyRef($hairColor, 4) ?></td>
-                    <td><span>&#10060;</span></td>
-                    <td><span>&#10003;</span></td>
-                    <td><span>&#10060;</span></td>
-                    <td><span>&#10003;</span></td>
+                    <td><?php if ($hairColor['Anne'] === 'Blonde') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Anne'] === 'Brown') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Anne'] === 'Black') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Anne'] === 'Red') { echo $trueMark;} else {echo $falseMark;} ?></td>
+                    <td><?php if ($hairColor['Anne'] === 'Grey') { echo $trueMark;} else {echo $falseMark;} ?></td>
                   </tr>
                 </tbody>
               </table>
