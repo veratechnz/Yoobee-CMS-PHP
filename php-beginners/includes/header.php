@@ -11,6 +11,7 @@ include 'config/config.php'
               <a href="index.php" class="nav-btn btn btn-secondary my-2 <?php if( $activePage == 'index.php') {?> active <?php  } ?> ">Home</a>
               <a href="about.php" class="nav-btn btn btn-secondary my-2 <?php if( $activePage == 'about.php') {?> active <?php  } ?> ">About</a>
               <a href="contact.php" class="nav-btn btn btn-secondary my-2 <?php if( $activePage == 'contact.php') {?> active <?php  } ?> ">Contact</a>
+              <a href="nasa-api.php" class="nav-btn btn btn-secondary my-2 <?php if( $activePage == 'nasa-api.php') {?> active <?php  } ?> ">Nasa API</a>
             </p>
           </div>
         </div>

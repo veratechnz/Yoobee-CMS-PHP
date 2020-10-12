@@ -1,0 +1,36 @@
+1. Demo Some PHP Methods To The Class
+
+<?php
+$arr = array('Hello','World!','Beautiful','Day!');
+echo implode(" ",$arr);
+?>
+
+<?php
+$str = "Hello world. It's a beautiful day.";
+print_r (explode(" ",$str));
+?>
+
+
+<?php
+print_r(pathinfo("/testweb/test.txt"));
+?>
+
+*** Activity -- Get students to explore methods and find one of their own to describe to the class
+https://www.w3schools.com/php/php_ref_zip.asp
+
+2.
+Make an external functions/functions.php folder and files
+
+Scaffold out the dd function and the keyRef Function and use on the table with
+the group.
+
+*** Activity -- Get the group to make a function of their choice that relates to the table.
+  Explore ideas for 5 minutes
+  Think of a function you could make
+  Write pseudocode
+  Code function
+  Add to functions file
+  Call/invoke on the tables file
+
+  NASA API:
+  https://api.nasa.gov/planetary/apod?api_key=ifJtByfTR7BkhLKWegS3lYREJWvFWy9hNU86OfEk
