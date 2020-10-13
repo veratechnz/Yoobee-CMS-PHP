@@ -1,65 +1,42 @@
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php
 
-<title>Bootstrap Contact Form</title>
+include 'functions.php';
 
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+// Using the post super global to assign input values to variables
+$title = $_POST['title'];
+$releaseDate = $_POST['release-date'];
+$boxOffice = $_POST['box-office'];
+$synopsis = $_POST['synopsis'];
+$starring = $_POST['starring'];
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.pack.js" type="text/javascript"></script>
+// Echo out all of the input values
+echo $title . $releaseDate . $boxOffice . $synopsis . $starring;
 
-</head>
+// Database Variables
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "test_php";
 
-<body>
-  <div class="container">
+// Create connection mysqli object orientated method:
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    <div class="row">
-      <div class="col-md-6">
-        <form role="form" method="post" action="post-data-form.php" id="contactform">
-          <fieldset>
-            <legend>Enter Your Data To Post A New Movie</legend>
-						<!-- name, release_date, box_office, synopsis, starring -->
-            <div class="form-group">
-              <label for="name">Movie Title<span class="help-required">*</span></label>
-              <input type="text" name="title" value="" class="form-control required" role="input" aria-required="true" />
-            </div>
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
-            <div class="form-group">
-              <label for="phone">Release Date<span class="help-required">*</span></label>
-              <input type="text" name="release-date" value="" class="form-control required" role="input" aria-required="true" />
-            </div>
+// SQL query inserting data into a table
+$sql = "INSERT INTO movies (name, release_date, box_office, synopsis, starring)
+VALUES ('$title', '$releaseDate', '$boxOffice', '$synopsis', '$starring')";
 
-						<div class="form-group">
-              <label for="phone">Box Office<span class="help-required">*</span></label>
-              <input type="text" name="box-office" value="" class="form-control required" role="input" aria-required="true" />
-            </div>
+// If connection was successful
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+  renderDataToHtml();
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
-						<div class="form-group">
-              <label for="phone">Synopsis<span class="help-required">*</span></label>
-              <input type="text" name="synopsis" value="" class="form-control required" role="input" aria-required="true" />
-            </div>
-
-						<div class="form-group">
-              <label for="phone">Starring<span class="help-required">*</span></label>
-              <input type="text" name="starring" value="" class="form-control required" role="input" aria-required="true" />
-            </div>
-
-            <div class="actions">
-              <input type="submit" value="Send Data" name="submit" id="submitButton" class="btn btn-primary" title="Click here to submit your message!" />
-            </div>
-          </fieldset>
-        </form>
-      </div><!-- col -->
-    </div><!-- row -->
-
-      <hr>
-
-      <div class="footer">
-        <p>&copy; Company 2020</p>
-      </div>
-
-    </div> <!-- /container -->
-</body>
-</html>
+// Close connection
+$conn->close();

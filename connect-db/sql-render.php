@@ -1,5 +1,7 @@
 <?php
 
+include 'functions.php';
+
 // Database Variables
 $servername = "localhost";
 $username = "root";
@@ -13,7 +15,7 @@ $mBoxOffice = '$40,000,000';
 $mSynopsis = 'A tale about ghosts and busters.';
 $mStarring = 'Tom Cruise';
 
-// Create connection mysqli object orientated method:
+// Create connection mysqli object orientated method:+''
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
