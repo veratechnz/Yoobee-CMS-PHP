@@ -48,10 +48,8 @@
 
             <div class="actions">
               <input type="submit" value="Send Data" name="submit" id="submitButton" class="btn btn-primary" title="Click here to submit your message!" />
-              <input type="submit" value="Delete Data" name="delete" id="submitButtonDelete" class="btn btn-danger" title="Click here to submit your message!" />
-              <input type="submit" value="Delete All Data" name="deleteAll" id="submitButtonDeleteAll" class="btn btn-danger" title="Click here to submit your message!" />
+              <input type="submit" value="Send Data" name="delete" id="submitButtonDelete" class="btn btn-danger" title="Click here to submit your message!" />
             </div>
-
           </fieldset>
         </form>
       </div><!-- col -->

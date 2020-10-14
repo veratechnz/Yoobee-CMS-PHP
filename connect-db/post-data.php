@@ -1,42 +1,75 @@
 <?php
-
 include 'functions.php';
+include 'config.php';
+?>
 
-// Using the post super global to assign input values to variables
-$title = $_POST['title'];
-$releaseDate = $_POST['release-date'];
-$boxOffice = $_POST['box-office'];
-$synopsis = $_POST['synopsis'];
-$starring = $_POST['starring'];
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-// Echo out all of the input values
-echo $title . $releaseDate . $boxOffice . $synopsis . $starring;
+<title>Movie Upload Form</title>
 
-// Database Variables
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "test_php";
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-// Create connection mysqli object orientated method:
-$conn = new mysqli($servername, $username, $password, $dbname);
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.pack.js" type="text/javascript"></script>
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+</head>
 
-// SQL query inserting data into a table
-$sql = "INSERT INTO movies (name, release_date, box_office, synopsis, starring)
-VALUES ('$title', '$releaseDate', '$boxOffice', '$synopsis', '$starring')";
+<body>
+  <div class="container">
 
-// If connection was successful
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-  renderDataToHtml();
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+    <div class="row">
+      <?php
+       if ($_POST['submit']) {
+          // SQL query inserting data into a table
+          $sql = "INSERT INTO movies (name, release_date, box_office, synopsis, starring)
+          VALUES ('$title', '$releaseDate', '$boxOffice', '$synopsis', '$starring')";
 
-// Close connection
-$conn->close();
+          // If connection was successful
+          if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+            renderDataToHtml();
+          } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+          }
+          // Delete was clicked
+          $conn->close();
+        } // if post submit ENDS
+
+      // Delete process for form submission
+      if ($_POST['delete']) {
+        echo 'delete was clicked';
+        $titleB = $_POST['title'];
+        $sqlD = "DELETE FROM movies WHERE name = '$titleB'";
+          // If connection was successful
+        if ($conn->query($sqlD) === TRUE) {
+          echo "Record Deleted";
+          renderDataToHtml();
+        } else {
+          echo "Error: " . $sqlD . "<br>" . $conn->error;
+        }
+        // Delete was clicked
+        $conn->close();
+      }
+
+      // Delete process for form submission
+      if ($_POST['deleteAll']) {
+        echo 'Delete All Was Clicked';
+        $sqlDA = "DELETE FROM movies";
+          // If connection was successful
+        if ($conn->query($sqlDA) === TRUE) {
+          echo "All Record Deleted";
+        } else {
+          echo "Error: " . $sqlDA . "<br>" . $conn->error;
+        }
+        // Delete was clicked
+        $conn->close();
+      }
+      ?>
+    </div>
+
+  </div>
+</body>
+</html>
