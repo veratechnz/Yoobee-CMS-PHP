@@ -8,7 +8,7 @@ include 'config.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Movie Upload Form</title>
+<title>Movie Upload Form...</title>
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
@@ -68,6 +68,7 @@ include 'config.php';
         $conn->close();
       }
       ?>
+
     </div>
 
   </div>
