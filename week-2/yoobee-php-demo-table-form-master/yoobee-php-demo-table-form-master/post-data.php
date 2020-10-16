@@ -8,7 +8,7 @@ include 'config.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Movie Upload Form...</title>
+<title>Movie Upload Form ||</title>
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
@@ -22,6 +22,9 @@ include 'config.php';
 
     <div class="row">
       <?php
+      $aVariable = 'something';
+      echo $ariable;
+
        if ($_POST['submit']) {
           // SQL query inserting data into a table
           $sql = "INSERT INTO movies (name, release_date, box_office, synopsis, starring)
@@ -67,8 +70,21 @@ include 'config.php';
         // Delete was clicked
         $conn->close();
       }
-      ?>
 
+      // Delete process for form submission
+      if ($_POST['updateItem']) {
+        echo 'Update was clicked';
+        $sqlU = "UPDATE movies SET starring = '$starring', release_date = '$releaseDate' WHERE name = '$title'";
+        // If connection was successful
+        if ($conn->query($sqlU) === TRUE) {
+          echo "All Records Updated";
+        } else {
+          echo "Error: " . $sqlU . "<br>" . $conn->error;
+        }
+        // Delete was clicked
+        $conn->close();
+      }
+      ?>
     </div>
 
   </div>
