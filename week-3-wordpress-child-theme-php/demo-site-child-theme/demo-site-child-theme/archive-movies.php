@@ -1,4 +1,9 @@
 <?php
+// A file for rendering out movie archives
+// The wordpress custom post system will automatically pick this file if the
+// index.php/yourcustompostnamehere.php path is used in the browser
+
+
 /**
  * The template for displaying single posts and pages.
  *

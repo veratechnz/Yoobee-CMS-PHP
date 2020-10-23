@@ -1,4 +1,8 @@
 <?php
+// index.php is a central file. It is used when blog posts are referenced in particular
+// You will also see that ***below, the wordpress loop is used to render all ready to use
+// blog posts for the site. 
+
 /**
  * The main template file
  *
@@ -85,6 +89,7 @@ get_header();
 				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
 			}
 			// echo 'Testing message';
+			// ***
 			the_title();
 			the_time();
 			the_post();

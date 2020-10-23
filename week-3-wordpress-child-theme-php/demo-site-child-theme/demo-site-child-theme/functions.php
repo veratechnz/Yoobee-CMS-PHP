@@ -1,5 +1,10 @@
 <?php
 // Functions PHP
+// The main action file for wordpress child theme development
+// We have used this file to:
+// a. include js and css from both the parent and child my_theme_enqueue_styles
+// b. Create custom posts
+// c. Create custom taxonomies
 
 // Is adding **css** from the parent
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );

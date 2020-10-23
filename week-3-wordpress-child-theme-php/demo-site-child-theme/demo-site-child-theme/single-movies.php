@@ -1,4 +1,7 @@
 <?php
+// If a custom post type is created it will automatically look for the single-yourcustompostnamehere.php
+// file. This can be used as a template for outputting any single custom post.
+
 /**
  * The template for displaying single posts and pages.
  *

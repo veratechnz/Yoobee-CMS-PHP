@@ -12,7 +12,12 @@
  Text Domain:  demo-site-child-theme
 */
 
+/* A custom stylesheet MUST be created when you make a child theme.
+	Wordpress will interpret the comment above to register the childtheme
+	with the CMS and it's associated UI.
+ */
 
+ 
 .wpforms-title {
 	display: none;
 }

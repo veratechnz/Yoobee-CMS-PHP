@@ -1,4 +1,7 @@
 <?php
+// The singlular.php file is a central file for the twentytwenty theme.
+// It is referenced when 'pages' are output/rendered by wordpress.
+
 /**
  * The template for displaying single posts and pages.
  *

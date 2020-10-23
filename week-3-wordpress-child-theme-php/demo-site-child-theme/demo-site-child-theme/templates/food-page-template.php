@@ -2,6 +2,10 @@
 GUI -->
 <?php /* Template Name: Food Page Template */ ?>
 
+<!-- This is a page template. Them comment within the php code above will set a page template within the cms
+The code below was taken from singular.php in order to support the display of page templates. 
+ -->
+
 <?php
 get_header();
 ?>
