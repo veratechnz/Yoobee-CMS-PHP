@@ -8,14 +8,3 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <header>
-      <!-- Including the wordpress menu -->
-      <?php
-        wp_nav_menu(
-          array(
-            'theme_location' => 'upper-menu',
-          )
-        );
-       ?>
-       <!-- Menu Code ENDS -->
-    </header>

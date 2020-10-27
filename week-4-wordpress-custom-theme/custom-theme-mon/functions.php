@@ -7,10 +7,6 @@ function add_styles() {
   // Arguments explained at: https://developer.wordpress.org/reference/functions/wp_register_style/
    wp_register_style( 'boot-style', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');
    wp_enqueue_style('boot-style');
-
-   // All custom styles
-   wp_register_style( 'custom-style', get_template_directory_uri() . '/css/custom.css', array(), false, 'all');
-   wp_enqueue_style('custom-style');
 }
 
 // Call the styles function
@@ -30,18 +26,3 @@ function add_scripts() {
 
 // Call the .js function
 add_action( 'wp_enqueue_scripts', 'add_scripts' );
-
-
-
-// Menu menu support
-// Menus will now appear in the wordpress admin
-add_theme_support('menus');
-
-// Registering a main upper menu and mobile menu with wordpress admin
-register_nav_menus(
-    array(
-      // Id of the menu || The displayed name of the menu
-      'upper-menu'=> 'Upper Menu',
-      'upper-mobile-menu' => 'Upper Mobile Menu',
-    )
-);
