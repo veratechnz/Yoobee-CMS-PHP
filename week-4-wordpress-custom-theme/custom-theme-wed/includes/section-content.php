@@ -4,7 +4,7 @@ the relevant content. -->
 	<?php while ( have_posts() ) : the_post(); ?>
 	<!-- Do stuff ... -->
   <h1><?php the_title(); ?></h1>
-
+  
    <?php the_content();  ?>
    <!-- Do stuff ENDS -->
 	<?php endwhile; ?>

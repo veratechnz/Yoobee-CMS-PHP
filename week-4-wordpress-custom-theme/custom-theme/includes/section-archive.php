@@ -5,7 +5,15 @@ the relevant content. -->
 	<!-- Do stuff ... -->
   <h1><?php the_title(); ?></h1>
 
-   <?php the_content();  ?>
+  <?php
+		// Output the content of the php
+		// the_content();
+
+		the_excerpt();
+	?>
+
+	<a href="<?php the_permalink(); ?>">View Post</a>
+
    <!-- Do stuff ENDS -->
 	<?php endwhile; ?>
 <?php endif; ?>

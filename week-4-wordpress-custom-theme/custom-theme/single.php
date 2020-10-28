@@ -1,6 +1,6 @@
 <?php
 // The single blog post template page, for every single post on your web site <?php
-echo 'This is post.php';
+echo 'This is single.php';
  ?>
 
 <?php
@@ -15,7 +15,7 @@ get_header();
 <!-- References includes folder section- then content () same file name -->
 <!-- Loads a template part into a template. https://developer.wordpress.org/reference/functions/get_template_part/ -->
 <?php echo 'This is archive.php'; ?>
-<?php get_template_part('includes/section', 'content'); ?>
+<?php get_template_part('includes/section', 'single'); ?>
 
 <?php
 get_footer();

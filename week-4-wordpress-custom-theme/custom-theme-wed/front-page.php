@@ -9,12 +9,8 @@ get_header();
 
 <!-- References includes folder section- then content () same file name -->
 <!-- Loads a template part into a template. https://developer.wordpress.org/reference/functions/get_template_part/ -->
-<?php echo 'This is archive.php'; ?>
-
-<?php get_template_part('includes/section', 'archive'); ?>
-
-<?php previous_posts_link(); ?>
-<?php next_posts_link(); ?>
+<?php echo 'Home Page Template'; ?>
+<?php get_template_part('includes/section', 'content'); ?>
 
 <?php
 get_footer();

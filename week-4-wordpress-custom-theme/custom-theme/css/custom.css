@@ -6,6 +6,56 @@ h1 {
 
 
 header {
-  height: 100px;
+  height: 60px;
   background-color: #333;
+}
+
+/* Menu Styling */
+#menu-upper-menu {
+  width: 30%;
+  margin: 0 auto !important;
+}
+
+#menu-upper-menu,
+#menu-upper-menu .sub-menu  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+#menu-upper-menu li,
+#menu-upper-menu .sub-menu li {
+  float: left;
+}
+
+#menu-upper-menu li a,
+#menu-upper-menu .sub-menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+#menu-upper-menu li a:hover {
+  background-color: #111111;
+}
+
+#menu-upper-menu .menu-item-has-children {
+  position: relative;
+}
+
+#menu-upper-menu .menu-item-has-children ul{
+  display: none;
+}
+
+#menu-upper-menu .menu-item-has-children ul li {
+  float: inherit !important;
+}
+
+/* Enable the hover switch */
+#menu-upper-menu .menu-item-has-children:hover ul{
+  display: block;
 }
