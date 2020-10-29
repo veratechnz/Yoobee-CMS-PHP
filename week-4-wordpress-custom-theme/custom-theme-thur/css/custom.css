@@ -4,21 +4,10 @@ h1 {
   color: green !important;
 }
 
-header {
-  height: 104px;
-  margin-bottom: 20px;
-  background-color: #333;
-  border-bottom: 4px #000 solid;
-  /* Shadow */
-  -webkit-box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
-  box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
-}
 
-.menu-upper-menu-container {
-  display: inline-block;
-  width: 80%;
-  float: right;
+header {
+  height: 60px;
+  background-color: #333;
 }
 
 /* Menu Styling */
@@ -46,7 +35,7 @@ header {
   display: block;
   color: white;
   text-align: center;
-  padding: 38px;
+  padding: 16px;
   text-decoration: none;
 }
 
@@ -69,10 +58,4 @@ header {
 /* Enable the hover switch */
 #menu-upper-menu .menu-item-has-children:hover ul{
   display: block;
-  position: fixed;
-  z-index: 99999;
-}
-
-.attachment-post-thumbnail {
-  width: 60%;
 }

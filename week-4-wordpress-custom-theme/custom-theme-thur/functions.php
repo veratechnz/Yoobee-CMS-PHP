@@ -31,6 +31,8 @@ function add_scripts() {
 // Call the .js function
 add_action( 'wp_enqueue_scripts', 'add_scripts' );
 
+
+
 // Menu menu support
 // Menus will now appear in the wordpress admin
 add_theme_support('menus');
@@ -44,47 +46,6 @@ register_nav_menus(
     )
 );
 
-// Add support for blog post featured image/thumbnail
-add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 600, 400);
-
-// Add support for a custom logo within the Theme
-function themename_custom_logo_setup() {
- $defaults = array(
- 'height'      => 100,
- 'width'       => 400,
- 'flex-height' => true,
- 'flex-width'  => true,
- 'header-text' => array( 'site-title', 'site-description' ),
-'unlink-homepage-logo' => false,
- );
- add_theme_support( 'custom-logo', $defaults );
-}
-add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
-
-// Add theme support for widgets
-add_theme_support('widgets');
-
-/**
- * Register our sidebars and widgetized areas.
- *
- */
-function arphabet_widgets_init() {
-
-	register_sidebar(
-    array (
-		'name'          => 'Right Sidebar',
-		'id'            => 'right-sidebar',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="rounded">',
-		'after_title'   => '</h2>',
-	 )
-  );
-
-}
-
-add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 /**
  * Proper ob_end_flush() for all levels
